@@ -1,2 +1,3 @@
 # bookbot
-boot.dev project that runs on a CLI,  used to counts words and letters from a .txt file
+
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
