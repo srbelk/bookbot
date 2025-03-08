@@ -3,7 +3,7 @@ def count_words(text):
     num_words = 0
     for word in list_of_words:
         num_words +=1
-    print(f"{num_words} words found in the document")
+    return num_words
 
 def count_characters(text):
     characters = list(text.lower())
@@ -15,3 +15,14 @@ def count_characters(text):
         else:
             dict_of_characters[character] = 1    
     return dict_of_characters
+
+def sort_characters(dict_of_characters):
+    list_of_char = []
+    for char, count in dict_of_characters.items():
+        list_of_char.append({"char": char, "count": count})
+
+    def sort_on(dict_of_characters):
+        return dict_of_characters["count"]
+
+    list_of_char.sort(reverse = True, key = sort_on )
+    return list_of_char
